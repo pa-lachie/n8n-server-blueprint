@@ -9,7 +9,7 @@
 
 services:
   - type: web
-    plan: free
+    plan: starter
     # This is the runtime for services that pull a prebuilt Docker image
     runtime: image
     # You can give the service any name
@@ -31,7 +31,7 @@ services:
       - key: N8N_ENCRYPTION_KEY
         generateValue: true
 
-      # These automatically populate connection details 
+      # These automatically populate connection details
       # for the Render Postgres database defined below
       - key: DB_TYPE
         value: postgresdb
@@ -54,7 +54,7 @@ services:
 
 databases:
   - name: n8n-db
-    plan: free
+    plan: basic-256mb
     # The free instance type is limited to 1 GB of disk
     # space.
     #
